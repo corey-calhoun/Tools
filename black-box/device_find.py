@@ -57,3 +57,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# EDIT: For some reason after running the script, I need to press enter to get the list to print. I'm not sure why.
