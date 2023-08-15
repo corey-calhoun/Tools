@@ -11,7 +11,6 @@ def hexdump(src, length=16, show=True):
     results = list()
     for i in range(0, len(src), length):
         word = str(src[i:i+length])
-
         printable = word.translate(HEX_FILTER)
         hexa = ' '.join([f'{ord(c):02X}' for c in word])
         hexwidth = length*3
@@ -25,7 +24,7 @@ def hexdump(src, length=16, show=True):
     
 def receive_from(connection):
     buffer = b''
-    connection.settimeout(5)
+    connection.settimeout(5) # 5 seconds but can be adjusted to whatever your needs are
 
     try:
         while True:
@@ -36,4 +35,12 @@ def receive_from(connection):
     except:
         pass
     
+    return buffer
+
+def request_handler(buffer):
+    # perform packet modifications
+    return buffer
+
+def response_handler(buffer):
+    # perform packet modifications
     return buffer
