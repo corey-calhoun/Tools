@@ -8,6 +8,7 @@
 # Date: 03/03/2023
 #
 # Usage: python3 starter.py <ip>
+# REQUIREMENTS: NMAP, PYTHON
 ####################################################################################################
 
 import re # Regular expressions
